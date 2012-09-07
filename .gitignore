@@ -1,0 +1,6 @@
+_site
+*~
+_*.swp
+.DS_Store
+Thumbs.db
+.sass-cache

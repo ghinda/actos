@@ -1,0 +1,57 @@
+/*
+Actos
+
+2012 © Ionut Colceriu - www.ghinda.net
+*/
+
+@import "compass/css3";
+@import "compass/utilities";
+
+/* Variables */
+
+$radius: .4em;
+$border-color-grey: #DEDEDE;
+
+/* Mixins */
+
+@mixin breakpoint($point) {
+	@if $point == papa-bear {
+		@media (min-width: 1020px) { @content; }
+	}
+	@if $point == mama-bear {
+		@media (min-width: 760px) { @content; }
+	}
+	@else if $point == baby-bear {
+		@media (min-width: 480px) { @content; }
+	}
+}
+
+/* General */
+
+body {
+	background-color: #42515a;
+	color: #fff;
+}
+
+h1,
+h2,
+h3 {
+	font-family: 'Oxygen', sans-serif;
+}
+
+.category:before {
+	content: " ";
+	display: block;
+	width: 0;
+	border-bottom: 30px solid #6C6;
+	border-left: 100px solid transparent;
+	border-right: 100px solid transparent;
+	
+	transform: scaleX(2.7);
+}
+
+
+//@include border-radius($radius);
+//@include box-shadow(rgba(255, 255, 255, 0.8) 0 1px 1px);
+
+//@include breakpoint(mama-bear) { display: block; }
